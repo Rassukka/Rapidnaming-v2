@@ -108,8 +108,14 @@ public class RapidnamingView extends VerticalLayout implements MathExerciseView<
 		clock.setDate(c.getTime());
 
 		String answer = getSolution(problem);
-		String capitalized = answer.substring(0, 1).toUpperCase() + answer.substring(1);
-		clock.setFormat("<span style='font: bold 25px Arial; margin: 10px'>" + capitalized + "</span>");
+		// String capitalized = answer.substring(0, 1).toUpperCase() + answer.substring(1);
+
+		// jos isolla ei ole valittu, kaikki sanat näytetään pienellä alkukirjaimella
+		if (data.getIsolla() == true) {
+			clock.setFormat("<span style='font: bold 25px Arial; margin: 10px'>" + answer + "</span>");
+		} else if (data.getIsolla() == false) {
+			clock.setFormat("<span style='font: bold 25px Arial; margin: 10px'>" + answer.toLowerCase() + "</span>");
+		}
 
 		clock.addEndEventListener(new EndEventListener() {
 			public void countDownEnded(CountdownClock clock) {

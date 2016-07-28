@@ -77,7 +77,7 @@ public class RapidnamingEditor implements MathTabbedEditorWrap<RapidnamingData> 
 		isolla = new CheckBox();
 		isolla.setCaption("Otetaanko isot kirjaimet huomioon?");
 
-		words = new ExpandingTextArea("Sanat joita kysytään: (allekkain, pienellä!)");
+		words = new ExpandingTextArea("Sanat joita kysytään: (allekkain!)");
 		words.setValue(getDefaultWords());
 		words.setImmediate(true);
 

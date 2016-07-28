@@ -32,24 +32,19 @@ public class RapidnamingState extends AbstractMathState<RapidnamingData, Rapidna
 				count = 0;
 			}
 
-			String answer = data.getSequence()[count];
-
-			count++;
+			String answer = "";
 
 			if (data.getIsolla() == true) {
-				String reply = answer.substring(0, 1).toUpperCase() + answer.toString().substring(1);
-				RapidnamingProblem problem = new RapidnamingProblem(reply, null);
-				RapidnamingAnswer correct = new RapidnamingAnswer(reply);
-				problem.setCorrectAnswer(correct);
-				return problem;
+				answer = data.getSequence()[count];
 			} else if (data.getIsolla() == false) {
-				RapidnamingProblem problem1 = new RapidnamingProblem(answer, null);
-				RapidnamingAnswer correctAnswer = new RapidnamingAnswer(answer);
-				problem1.setCorrectAnswer(correctAnswer);
-				return problem1;
-			} else {
-				return null;
+				answer = data.getSequence()[count].toLowerCase();
 			}
+			count++;
+
+			RapidnamingProblem problem1 = new RapidnamingProblem(answer, null);
+			RapidnamingAnswer correctAnswer = new RapidnamingAnswer(answer);
+			problem1.setCorrectAnswer(correctAnswer);
+			return problem1;
 
 		} else if (data.getMode() == RapidnamingMode.PICTURES) {
 
