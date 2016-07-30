@@ -55,6 +55,7 @@ public class RapidnamingEditor implements MathTabbedEditorWrap<RapidnamingData> 
 		this.rapidnamingMode = rapidnamingMode;
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public VerticalLayout drawSettings() {
 
