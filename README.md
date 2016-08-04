@@ -14,10 +14,10 @@ Oletussanojen vaihtamiseen vaihda ne RapidnamingEditor- ja RapidnamingTabbedEdit
     
 ###Ongelmat:
 
-Jos tehtävän alkaessa painaa enter nappulaa, ohjelma suoraan sanottuna sekoaa eikä toimi oikein.
+Jos tehtävän alkaessa ("Aloita tehtävä" nappulan kohdassa) painaa enter nappulaa, ohjelma suoraan sanottuna sekoaa eikä toimi oikein.
 
-Ajoitus ei toimi, esim. 0001ms ja 999ms on sama asia, kuin myös 2001 ja 2999, tähän pitää tehdä erilainen ratkaisu esim javascriptin avulla.
+Ajoitus ei toimi, esim. 0001ms ja 999ms on sama asia, kuin myös 2001 ja 2999, tähän pitää tehdä erillinen, lokaali ratkaisu esim. javascriptin avulla.
 
-Koodi on myöskin paikoittain melko sekaista ja todennäköisesti myös hidasta, muuttujien nimeäminenkään ei ole huolella tehty paikoin :/
+Koodi on myöskin paikoittain melko sekaista ja todennäköisesti myös hidasta, muuttujien nimeäminenkään ei ole huolella nimetty paikoin :/
 
 Myös lisää bugeja- ja parannuspaikkoja löytyy paljonkin varsinkin ulkonäön puolella.
